@@ -18,6 +18,13 @@ namespace P05ZadanieManagerTekstu
         public TypSzukania IleWyrazow { get; set; }
 
 
+        public ManagerTekstu(TypSzukania ileWyrazow)
+        {
+            IleWyrazow = ileWyrazow;
+        }
+
+
+
         public string[] PodajWyrazy(string zdanie)
         {
             if (IleWyrazow == TypSzukania.Jeden)

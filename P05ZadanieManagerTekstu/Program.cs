@@ -8,13 +8,14 @@ namespace P05ZadanieManagerTekstu
         {
             Console.WriteLine("Podaj typ szukania: 'jeden' lub 'wiele'");
 
-            string typ = Console.ReadLine();
+            string typ = Console.ReadLine().ToLower();
             TypSzukania? st=null;
 
             if (typ == "jeden")
                 st = TypSzukania.Jeden;
             if (typ == "wiele")
                 st = TypSzukania.Wiele;
+
 
             if(st != null)
             {

@@ -10,7 +10,10 @@ namespace P04ZadaniePogoda
     internal class ManagerPogody
     {
 
-        public double PodajTemperature(string miasto, char jedn)
+        public char Jednostka { get; set; }
+
+
+        public double PodajTemperature(string miasto/*, char jedn*/)
         {
             string url = $"https://www.google.com/search?q=pogoda+{miasto}";
             string dane = new WebClient().DownloadString(url);
@@ -30,18 +33,18 @@ namespace P04ZadaniePogoda
 
             int w= Convert.ToInt32(wynik.Substring(0,wynik.Length-2));
 
-            return TransformujTemperature(jedn, w);
+            return TransformujTemperature(/*jedn,*/ w);
         }
 
-        private double TransformujTemperature(char jedn, int temp) 
+        private double TransformujTemperature(/*char jedn,*/ int temp) 
         {
-            if (jedn == 'c')
+            if (Jednostka == 'c')
                 return temp;
 
-            if (jedn == 'f')
+            if (Jednostka == 'f')
                 return temp * 1.8 + 32;
 
-            if (jedn == 'k')
+            if (Jednostka == 'k')
                 return temp + 273.15;
 
 

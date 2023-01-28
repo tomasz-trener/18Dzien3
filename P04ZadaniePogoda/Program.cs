@@ -11,7 +11,12 @@ namespace P04ZadaniePogoda
         static void Main(string[] args)
         {
             ManagerPogody mp = new ManagerPogody();
-            double w =mp.PodajTemperature("warszawa", 'k');
+
+            mp.Jednostka = 'k';
+
+            double w =mp.PodajTemperature("warszawa"/*, 'k'*/);
+            w = mp.PodajTemperature("kraków"/*, 'k'*/);
+
 
             Console.WriteLine(w) ;
             Console.ReadKey();

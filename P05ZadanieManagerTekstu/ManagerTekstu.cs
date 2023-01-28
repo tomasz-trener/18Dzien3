@@ -47,7 +47,7 @@ namespace P05ZadanieManagerTekstu
             List<string> znalezione = new List<string>();
             string[] wyrazy = zdanie.Split(' ');
 
-            for (int i = 0; i < zdanie.Length; i++)
+            for (int i = 0; i < wyrazy.Length; i++)
                 if (wyrazy[i].Length == dlugosc)
                     znalezione.Add(wyrazy[i]);
 

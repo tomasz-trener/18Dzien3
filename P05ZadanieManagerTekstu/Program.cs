@@ -10,6 +10,15 @@ namespace P05ZadanieManagerTekstu
     {
         static void Main(string[] args)
         {
+            ManagerTekstu mt = new ManagerTekstu();
+            mt.IleWyrazow = "wiele";
+
+            string[] wyrazy= mt.PodajWyrazy("ala ma kot i ma psa");
+
+            Console.WriteLine(string.Join(", ", wyrazy));
+            Console.ReadKey();
+        
         }
+
     }
 }

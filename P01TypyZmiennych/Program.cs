@@ -17,6 +17,8 @@ namespace P01TypyZmiennych
             bool d    = false;
             string e  = "ala ma kota"; // string to klasa, która wygląda i działa jak struktura 
 
+            //String ee = new String("ala ma kota");
+
             WebClient f     = new WebClient();
             DateTime g      = new DateTime(); // to struktura, która działa i wygląda jak klasa
             StringBuilder h = new StringBuilder();

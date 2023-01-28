@@ -31,7 +31,13 @@ namespace P05ZadanieManagerTekstu
             {
                 Console.WriteLine("podales zly typ");
             }
-           
+
+
+
+
+
+            string s = "ala*ma^kota";
+            s.Split(new string[2] { "*", "^" }, StringSplitOptions.RemoveEmptyEntries);
         
         }
 

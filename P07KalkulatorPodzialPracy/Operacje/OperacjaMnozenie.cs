@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace P06ZadanieKalkulator.Operacje
-{
+{ 
     internal class OperacjaMnozenie
     {
     }

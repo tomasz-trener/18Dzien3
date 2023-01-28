@@ -4,9 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace P06ZadanieKalkulator.Operacje
+namespace P07KalkulatorPodzialPracy.Operacje
 {
     internal class OperacjaPotegowanie
     {
+        public double WykonajOperacje(int a, int b)
+        {
+            return Math.Pow(a, b);
+        }
+
     }
 }

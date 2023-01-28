@@ -1,4 +1,5 @@
-﻿using System;
+﻿using P07KalkulatorPodzialPracy.Operacje;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,19 +21,22 @@ namespace P07KalkulatorPodzialPracy
         public double WykonajOperacje(int a, int b , Operator typOperacji)
         {
             if (typOperacji == Operator.Dodawanie)
-                return dodaj(a, b);
+            {
+                OperacjaDodawanie od = new OperacjaDodawanie();
+                return od.WykonajOperacje(a, b);
+            }
 
             if (typOperacji == Operator.Odejmowanie)
-                return odejmij(a, b);
+                return new OperacjaOdejmowanie().WykonajOperacje(a, b);
 
             if (typOperacji == Operator.Mnozenie)
-                return przemnoz(a, b);
+                return new OperacjaMnozenie().WykonajOperacje(a, b);
 
             if (typOperacji == Operator.Dzielenie)
-                return podziel(a, b);
+                return new OperacjaDzielenie().WykonajOperacje(a, b);
 
             if (typOperacji == Operator.Potegowanie)
-                return poteguj(a, b);
+                return new OperacjaPotegowanie().WykonajOperacje(a, b);
 
             throw new Exception("nieznany operator");
         }

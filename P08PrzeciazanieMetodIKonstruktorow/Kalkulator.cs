@@ -16,8 +16,9 @@ namespace P08PrzeciazanieMetodIKonstruktorow
 
     internal class Kalkulator
     {
-
-
+        TypOperacji typ;
+        int maxOperacji;
+        int liczbaOperacji = 0;
         public Kalkulator()
         {
 
@@ -25,17 +26,28 @@ namespace P08PrzeciazanieMetodIKonstruktorow
 
         public Kalkulator(TypOperacji typOperacji)
         {
-
+            typ = typOperacji;
         }
 
-        public Kalkulator(TypOperacji typOperacji, int maxLiczbaOperacji)
+        public Kalkulator(TypOperacji typOperacji, 
+            int maxLiczbaOperacji)
         {
-
+            typ = typOperacji;
+            maxOperacji = maxLiczbaOperacji;
         }
 
         public string Dodaj(int a)
         {
-            return Convert.ToString(a);
+            if (liczbaOperacji<maxOperacji)
+            {
+                liczbaOperacji++;
+                return Convert.ToString(a);
+            }
+            else
+            {
+                throw new Exception("Przekroczono liczbe dozwolonych operacji");
+            }
+            
         }
 
         /// <summary>

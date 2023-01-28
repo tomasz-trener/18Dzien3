@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6EE76878-EC94-460A-B158-F871253FAB9E}</ProjectGuid>
+    <ProjectGuid>{72709F0A-2CD8-4727-BF1F-558FE5B075B4}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>P06ZadanieKalkulator</RootNamespace>
-    <AssemblyName>P06ZadanieKalkulator</AssemblyName>
+    <RootNamespace>P08PrzeciazanieMetodIKonstruktorow</RootNamespace>
+    <AssemblyName>P08PrzeciazanieMetodIKonstruktorow</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -49,9 +49,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="zadanie.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

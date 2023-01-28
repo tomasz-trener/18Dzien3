@@ -43,6 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Kalkulator.cs" />
+    <Compile Include="Operacje\OperacjaDodawanie.cs" />
+    <Compile Include="Operacje\OperacjaDzielenie.cs" />
+    <Compile Include="Operacje\OperacjaMnozenie.cs" />
+    <Compile Include="Operacje\OperacjaOdejmowanie.cs" />
+    <Compile Include="Operacje\OperacjaPotegowanie.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

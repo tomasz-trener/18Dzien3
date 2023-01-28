@@ -12,16 +12,18 @@ namespace P04ZadaniePogoda
 
         public char Jednostka { get; set; }
 
+        private const string szukanyZnak = "°";
+        private const string znakKoncowy = ">";
+        private const string url = "https://www.google.com/search?q=pogoda+";
+        // do czego sluza pola np:
+        // - przechowywanie prywatnych stałych 
 
         public double PodajTemperature(string miasto/*, char jedn*/)
         {
-            string url = $"https://www.google.com/search?q=pogoda+{miasto}";
-            string dane = new WebClient().DownloadString(url);
+            //string url = $"https://www.google.com/search?q=pogoda+{miasto}";
+            string dane = new WebClient().DownloadString(url+ miasto);
             //   Console.WriteLine(dane);
             //File.WriteAllText("c:\\dane\\strona.html", dane);
-
-            string szukanyZnak = "°";
-            string znakKoncowy = ">";
 
             int indx = dane.IndexOf(szukanyZnak);
             int aktualnaPozycja = indx;

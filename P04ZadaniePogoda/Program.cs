@@ -15,6 +15,8 @@ namespace P04ZadaniePogoda
             mp.Jednostka = 'k';
 
             double w =mp.PodajTemperature("warszawa"/*, 'k'*/);
+
+            mp.Jednostka = 'c';
             w = mp.PodajTemperature("kraków"/*, 'k'*/);
 
 

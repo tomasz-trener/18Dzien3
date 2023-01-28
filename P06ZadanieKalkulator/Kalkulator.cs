@@ -19,21 +19,45 @@ namespace P06ZadanieKalkulator
         public double WykonajOperacje(int a, int b, Operator typOperacji)
         {
             if (typOperacji == Operator.Dodawanie)
-                return a + b;
+                return dodaj(a, b);
 
             if (typOperacji == Operator.Odejmowanie)
-                return a - b;
+                return odejmij(a,b);
 
             if (typOperacji == Operator.Mnozenie)
-                return a * b;
+                return przemnoz(a,b);
 
             if (typOperacji == Operator.Dzielenie)
-                return a / b;
+                return podziel(a,b);
 
             if (typOperacji == Operator.Potegowanie)
-                return Math.Pow(a,b);
+                return poteguj(a,b);
 
             throw new Exception("nieznany operator");
+        }
+
+        private int dodaj(int a , int b)
+        {
+            return a + b;
+        }
+        private int odejmij(int a, int b)
+        {
+            return a - b;
+        }
+
+        private int przemnoz(int a, int b)
+        {
+            return a * b;
+        }
+
+        private double podziel(int a, int b)
+        {
+            return Convert.ToDouble(a) / b;
+        }
+
+        private double poteguj(int a, int b)
+        {
+            return Math.Pow(a, b);
         }
     }
 }

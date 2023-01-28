@@ -4,15 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace P06ZadanieKalkulator
+namespace P07KalkulatorPodzialPracy
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Kalkulator k = new Kalkulator();
-            //k.dodaj()
-            
         }
     }
 }

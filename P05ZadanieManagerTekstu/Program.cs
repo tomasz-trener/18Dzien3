@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace P05ZadanieManagerTekstu
 {
@@ -10,13 +6,31 @@ namespace P05ZadanieManagerTekstu
     {
         static void Main(string[] args)
         {
-            ManagerTekstu mt = new ManagerTekstu();
-            mt.IleWyrazow = "wiele";
+            Console.WriteLine("Podaj typ szukania: 'jeden' lub 'wiele'");
 
-            string[] wyrazy= mt.PodajWyrazy("ala ma kot i ma psa");
+            string typ = Console.ReadLine();
+            TypSzukania? st=null;
 
-            Console.WriteLine(string.Join(", ", wyrazy));
-            Console.ReadKey();
+            if (typ == "jeden")
+                st = TypSzukania.Jeden;
+            if (typ == "wiele")
+                st = TypSzukania.Wiele;
+
+            if(st != null)
+            {
+                ManagerTekstu mt = new ManagerTekstu((TypSzukania)st);
+                // mt.IleWyrazow = TypSzukania.Wiele;
+
+                string[] wyrazy = mt.PodajWyrazy("ala ma kot i ma psa");
+
+                Console.WriteLine(string.Join(", ", wyrazy));
+                Console.ReadKey();
+            }
+            else
+            {
+                Console.WriteLine("podales zly typ");
+            }
+           
         
         }
 

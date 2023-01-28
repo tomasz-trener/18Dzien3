@@ -6,17 +6,24 @@ using System.Threading.Tasks;
 
 namespace P05ZadanieManagerTekstu
 {
+    enum TypSzukania
+    {
+        Jeden,
+        Wiele
+    }
+
+
     internal class ManagerTekstu
     {
-        public string IleWyrazow { get; set; }
+        public TypSzukania IleWyrazow { get; set; }
 
 
         public string[] PodajWyrazy(string zdanie)
         {
-            if (IleWyrazow == "jeden")
+            if (IleWyrazow == TypSzukania.Jeden)
                 return new string[1] { znajdzNajdluzszyWyraz(zdanie) };
 
-            if (IleWyrazow == "wiele")
+            if (IleWyrazow == TypSzukania.Wiele)
                 return znajdzWszystkieNajdluzszeWyrazy(zdanie);
 
             throw new Exception("Nieznany parametr IleWyrazow");

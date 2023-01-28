@@ -1,0 +1,5 @@
+
+
+Stworz klase ManagerPogody , ktora bedzie udsotepniac metode "Podaj temperature" dla danego miasta 
+
+wynik w postaci int
